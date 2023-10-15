@@ -29,3 +29,20 @@ type Post<T, NT> = {
   title:T
   body:T
 }
+
+type Result<T, NT> = {
+  pageid:T
+  title:T
+  extract:T
+  thumbnail?:{
+    source:T
+    width:NT
+    height:NT
+  }
+} 
+
+type SearchResult = {
+  query?: {
+    pages?:Result[]
+  }
+}
