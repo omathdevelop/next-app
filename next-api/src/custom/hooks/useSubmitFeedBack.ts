@@ -5,7 +5,8 @@ const response = await fetch('http://localhost:3000/api/feedback',
     headers: {
         'Content-Type': 'application/json'
     },
-    body: JSON.stringify({name, email, message})
+    body: JSON.stringify({name, email, message}),
+    cache: 'force-cache'
 }
 );
 const res = await response.json();
