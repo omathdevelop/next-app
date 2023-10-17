@@ -8,7 +8,7 @@ export const GET = async () => {
     return NextResponse.json(todos);
 };
 
-console.log({API_KEY})
+
 export const DELETE = async (request: Request) => {
     const { id }: Partial<Todo<string, number, boolean>> = await request.json();
     if(!id) return NextResponse.json({"message": "Todo id is required!!"});
