@@ -19,14 +19,12 @@ const Users = async () => {
             <br/>
             {users.map(user => {
                 const {id} = user;
-             return (
-                <>
-                <p key={id}>
+             return <p key={id}>
                     <Link href={`users/${id}`}>{user.name}</Link>
+                    
+                    <br/>
                 </p>
-                <br/>
-                </>
-             )
+             
             })}
         </section>
     )
